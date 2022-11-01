@@ -3,7 +3,7 @@ import { join } from "path";
 import { logger, Mustache, winPath } from "@umijs/utils";
 import type { IApi } from "umi";
 // @ts-ignore 暂时屏蔽
-import px2rem from "../compiled/postcss-plugin-px2rem";
+import px2rem from "./compiled/postcss-plugin-px2rem";
 
 const DIR_NAME = "plugin-mobile-hd";
 
@@ -95,7 +95,7 @@ export default (api: IApi) => {
   api.onGenerateFiles({
     fn() {
       const hdTpl = readFileSync(
-        join(__dirname, "..", "templates", "index.tpl"),
+        join(__dirname, ".", "templates", "index.tpl"),
         "utf-8"
       );
       api.writeTmpFile({
