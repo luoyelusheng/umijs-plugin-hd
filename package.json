@@ -1,7 +1,7 @@
 {
   "name": "umijs-plugin-hd",
   "author": "luoyelusheng",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Mobile HD adaptation solution",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -9,12 +9,12 @@ Mobile HD adaptation solution
 
 ```bash
 # or yarn
-$ npm install
+npm install
 ```
 
 ```bash
-$ npm run build --watch
-$ npm run start
+npm run build --watch
+npm run start
 ```
 
 ## Usage
@@ -23,6 +23,7 @@ Configure in `.umirc.js`,
 
 ```js
 export default {
+  mobileHd: {},
   plugins: [
     ['umijs-plugin-hd'],
   ],
@@ -31,7 +32,29 @@ export default {
 
 ## Options
 
-TODO
+可用选项
+
+```js
+export default {
+  mobileHd: {
+    "theme": {
+      "@hd": "2px" // 默认配置
+    },
+    "px2rem": {
+      "rootValue": 100,
+      "unitPrecision": 5,
+      "propWhiteList": [],
+      "propBlackList": [],
+      "exclude": false,
+      "selectorBlackList": [],
+      "selectorDoubleRemList": [/.adm-/, /.ant-/, /\:root/],
+      "ignoreIdentifier": false,
+      "replace": true,
+      "mediaQuery": false,
+      "minPixelValue": 0
+    }
+  }
+```
 
 ## LICENSE
 
